@@ -1,16 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';  
-import Clock from './Clock';
-import HelloWorld from './HelloWorld';
-// import HelloWorld from './HelloWorld';
+import Post from './components/Post';
+import Sidebar from './components/Sidebar'; 
+import { useState } from 'react';
 
 function App() {
+
+
+  const[post] = useState({
+    title: 'Título maneiro',
+    content: 'Loren Ipsum dolor sit amet'
+  })
+
+
   return (
     <div className="App">
       <header className="App-header"> 
-        <Clock />
-        {/* <HelloWorld /> */}
+       <Sidebar />
+       <Post post={post}/>
+   
         
       </header>
     </div>
