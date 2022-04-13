@@ -1,9 +1,10 @@
 import { PropsWithChildren, ReactNode } from "react"
-
+import './Card.css'
 
 type CardProps = {
     title?: string
     children?: ReactNode
+    align?: 'left'| 'right'| 'center'
 }
 
 // type CardProps = PropsWithChildren<{
@@ -11,13 +12,7 @@ type CardProps = {
 //    
 // }>
 export default function Card(props: CardProps) {
-    return <div
-        style={{
-            background: 'rgba(0,0,0,.25)',
-            borderRadius: 8,
-            padding: 16
-        }}
-    >
+    return <div className={`Card ${props.align || 'center'}`}>
         {props.children}
     </div>
 

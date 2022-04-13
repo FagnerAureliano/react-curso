@@ -17,7 +17,7 @@ function App() {
   //     title: 'Título maneiro 222',
   //     content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
 
-  
+
   //   })
   // }, 4000);
 
@@ -25,9 +25,9 @@ function App() {
     <div className="App">
       <header className="App-header">
 
-        <Card >
+        <Card  >
           <Sidebar post={post} />
-          <Post post={post} totalComents={12} />
+          <Post  post={post} totalComents={12} />
         </Card>
 
       </header>
